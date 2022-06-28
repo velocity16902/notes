@@ -1,0 +1,59 @@
+site:codepad.co "bynder.com"
+site:zoom.us "bynder.com"
+site:scribd.com "bynder.com"
+site:npmjs.com "bynder.com"
+site:npm.runkit.com "bynder.com"
+site:libraries.io "bynder.com"
+site:ycombinator.com "bynder.com"
+site:coggle.it "bynder.com"
+site:papaly.com "bynder.com"
+site:google.com "bynder.com"
+site:trello.com "bynder.com"
+site:prezi.com "bynder.com"
+site:jsdelivr.net "bynder.com"
+site:codepen.io "bynder.com"
+site:codeshare.io "bynder.com"
+site:sharecode.io "bynder.com"
+site:pastebin.com "bynder.com"
+site:repl.it "bynder.com"
+site:productforums.google.com "bynder.com"
+site:gitter.im "bynder.com"
+site:bitbucket.org "bynder.com"
+site:*.atlassian.net "bynder.com"
+atlassian.net "bynder.com"
+inurl:gitlab "bynder.com"
+
+
+site:http://repl.it intext:bynder.com
+site:http://zoom.us inurl:bynder.com
+site:http://atlassian.net inurl:bynder.com
+site:http://s3.amazonaws.com inurl:bynder.com
+site:http://pastebin.com inurl:bynder.com
+site:http://scribd.com intext:http://internal.bynder.com
+site:http://bynder.com intitle:Index of
+site:http://bynder.com ext:log
+site:http://bynder.com inurl:redir | inurl:redirect | inurl:return | inurl:to
+site:http://bynder.com ext:doc | ext:docx | ext:odt | ext:pd
+site:http://bynder.com ext:sql
+
+
+
+Use this in github
+
+"http://bynder.com.atlassian.net" password
+"http://jira.traget.com" password
+"http://internal.bynder.com.com" password
+"bynder.com.atlassian" password
+"bynder.com.okta" password
+"http://corp.bynder.com" password
+"http://jira.bynder.com" password
+"bynder.com.onelogin" password
+bynder.com.service-now password
+
+"http://bynder.com" dotfiles
+"http://bynder.com" authorizationToken
+"http://bynder.com" access_token
+"http://bynder.com" secret_key
+corp.bynder.com 
+internalbynder.com.com 
+bynder.cominternal.com

